@@ -1,22 +1,92 @@
 {
   "orgName": "expansiva",
-  "designSystems": [
-    {
-      "dsIndex": "0",
-      "dsName": "localDesignSystem",
-      "widgetIOName": "_100554_configDsDefault"
-    }
-  ],
   "languages": [
     {
       "language": "en",
       "name": "English",
       "path": "/"
+    },
+    {
+      "language": "pt",
+      "name": "Portuguese",
+      "path": "/pt"
     }
   ],
   "plugins": {},
   "reasons": {},
   "services": [],
   "links": [],
-  "servicesConfigEnabled": false
+  "servicesConfigEnabled": false,
+  "modules": [
+    {
+      "moduleName": "cafeFlow",
+      "module": {
+        "moduleName": "CafeFlow",
+        "purpose": "Agilizar pedidos e controle simples de estoque por ingrediente para cafeterias e lanchonetes pequenas, com coordenação de cozinha e métricas operacionais.",
+        "businessDomain": "foodServicePos",
+        "languages": [
+          "pt-BR",
+          "en"
+        ],
+        "visualStyle": {
+          "tone": "Moderno e minimalista",
+          "layout": "Interface rápida com foco em POS e painéis operacionais",
+          "palette": [
+            "#C85A2A",
+            "#F2C57C",
+            "#F6F1EB",
+            "#3B2F2F",
+            "#2E7D32"
+          ]
+        }
+      }
+    }
+  ],
+  "layouts": {
+    "1": {
+      "name": "standard",
+      "skill": "_102020_/l2/agentMaterializeSolution/skills/genPageRender.ts"
+    }
+  },
+  "designSystems": {
+    "1": {
+      "name": "default",
+      "skill": "_102020_/l2/agentMaterializeSolution/skills/genPageDS.ts"
+    },
+    "2": {
+      "name": "Collab design",
+      "description": "Um design system de teste",
+      "skill": "_102020_/l2/agentMaterializeSolution/skills/genPageDS.ts",
+      "rules": {
+        "labelPlacement": "floating",
+        "validation": "inline-below",
+        "listOverflow": "infinite",
+        "requiredMark": "asterisk",
+        "boolean": "toggle",
+        "numberInput": "input",
+        "dateInput": "compact",
+        "intervalInput": "dual-calendar",
+        "timeInput": "scroll-picker",
+        "selectOne": "dropdown",
+        "selectMany": "dropdown",
+        "upload": "dropzone",
+        "feedback": "toast",
+        "progress": "spinner",
+        "recordsView": "table",
+        "metric": "big-number",
+        "hierarchy": "tree",
+        "actionStyle": "standard",
+        "rating": "stars",
+        "expand": "accordion",
+        "accordionMode": "single",
+        "search": "bar"
+      },
+      "moduleOverrides": {},
+      "pageOverrides": {
+        "cafeFlow/dashboardGerente": {
+          "metric": "gauge"
+        }
+      }
+    }
+  }
 }
